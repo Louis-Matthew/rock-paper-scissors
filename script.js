@@ -9,3 +9,8 @@ function getComputerChoice() {
     return "scissors";
   }
 }
+
+function getHumanChoice() {
+  let answer = prompt("Enter Rock, Paper or Scissors!");
+  return answer.toLowerCase();
+}
