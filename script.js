@@ -46,7 +46,22 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+  const numOfRounds = 5;
 
-playRound(humanSelection, computerSelection);
+  for (let i = 1; i <= numOfRounds; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection, computerSelection);
+  }
+  if (humanScore > computerScore) {
+    console.log("Final Winner : You!!");
+  } else if (humanScore < computerScore) {
+    console.log("Final Winner : Computer");
+  } else {
+    console.log("TIE!!");
+  }
+}
+
+playGame();
